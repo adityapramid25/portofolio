@@ -6,7 +6,6 @@
     <title>Portofolio - Aditya Pramana Putra</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-        /* Gaya Umum */
         * {
             margin: 0;
             padding: 0;
@@ -15,36 +14,33 @@
 
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #1C1C1C; /* Latar Belakang Utama */
-            color: #FAFAFA;    /* Teks Utama */
+            background-color: #1C1C1C;
+            color: #FAFAFA;
             line-height: 1.6;
-            text-align: center; /* Teks default rata tengah, kecuali paragraf perkenalan */
+            text-align: center;
         }
 
-        /* Container & Header */
         .wrap {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* Gaya Khusus untuk Sapaan Awal */
         .greeting {
             font-size: 1.5em;
-            color: #00A9FF; /* Warna Aksen */
+            color: #00A9FF;
             margin-bottom: 5px;
             font-weight: 500;
         }
 
         h1 {
             font-size: 3.2em;
-            color: #00A9FF; /* Aksen */
+            color: #00A9FF;
             padding-top: 5px;
             margin-bottom: 5px;
             letter-spacing: 1px;
         }
         
-        /* Subjudul Perkenalan (h2) */
         h2 {
             font-size: 1.8em;
             color: #FAFAFA;
@@ -52,11 +48,10 @@
             margin-bottom: 30px;
         }
 
-        /* Gaya Bagian (Section) */
         .sec {
             padding: 40px 0;
             margin-top: 20px;
-            border-top: 1px solid #444444; /* Garis Pemisah */
+            border-top: 1px solid #444444;
         }
         
         .sec:first-of-type {
@@ -65,13 +60,12 @@
 
         .sec-title {
             font-size: 2.2em;
-            color: #00A9FF; /* Aksen */
+            color: #00A9FF;
             margin-bottom: 25px;
             font-weight: 500;
-            text-align: center; /* Pastikan judul section tetap rata tengah */
+            text-align: center;
         }
 
-        /* Gaya Data Point */
         .data {
             display: inline-block;
             background-color: #282828; 
@@ -94,7 +88,6 @@
             transform: translateY(-2px); 
         }
         
-        /* Gaya Keahlian */
         .skill-list {
             list-style: none;
             display: flex;
@@ -103,7 +96,6 @@
             flex-wrap: wrap;
         }
 
-        /* Gaya KOTAK BESAR untuk setiap Keahlian (Desktop Default) */
         .skill-list li {
             width: 180px;
             height: 120px;
@@ -119,36 +111,34 @@
             background-color: #282828;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
             cursor: default;
-            font-size: 1.1em; /* Ukuran teks keahlian desktop */
+            font-size: 1.1em;
         }
         
         .skill-list li:hover {
             transform: translateY(-5px);
         }
 
-        /* Gaya untuk Container Ikon Keahlian (Desktop Default) */
         .skill-icon { 
+            padding: 5px;
             margin-right: 0;
             margin-bottom: 8px;
             line-height: 1;
             display: flex; 
             align-items: center;
             justify-content: center;
-            width: 70px; /* Ukuran gambar default desktop */
-            height: 70px; /* Ukuran gambar default desktop */
+            width: 70px;
+            height: 70px;
         }
 
-        /* Gaya untuk Gambar di dalam skill-icon */
         .skill-icon img {
-            max-width: 100%; 
-            max-height: 100%; 
-            height: auto; 
-            display: block; 
-            object-fit: contain; 
+            max-width: 100%;
+            max-height: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
         }
 
 
-        /* Warna Keahlian Spesifik */
         .html { color: #E44D26; border-color: #E44D26; }
         .html:hover { background-color: #E44D26; color: #FAFAFA; box-shadow: 0 6px 12px rgba(228, 77, 38, 0.5); }
 
@@ -158,7 +148,6 @@
         .kotlin { color: #7F52FF; border-color: #7F52FF; }
         .kotlin:hover { background-color: #7F52FF; color: #1C1C1C; box-shadow: 0 6px 12px rgba(127, 82, 255, 0.5); }
         
-        /* Gaya Sosial Media */
         .social {
             list-style: none;
             display: flex;
@@ -180,7 +169,6 @@
 
         .social-icon { margin-right: 8px; font-size: 1.3em; }
 
-        /* Warna Sosial Media Spesifik */
         .ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
         .ig:hover { box-shadow: 0 0 15px rgba(220, 39, 67, 0.7); opacity: 0.9; }
 
@@ -196,7 +184,6 @@
         .fb { background-color: #1877F2; color: white; }
         .fb:hover { background-color: #3b5998; }
         
-        /* Footer */
         footer {
             margin-top: 50px;
             padding: 20px 0;
@@ -205,13 +192,11 @@
             color: #444444;
         }
         
-        /* Style untuk email di bagian kontak */
         #contact p a {
              color: #00A9FF;
              text-decoration: none;
         }
 
-        /* STYLE PERUBAHAN: Teks Rata Kanan Kiri */
         .header-paragraph {
             text-align: justify; 
             max-width: 650px; 
@@ -220,63 +205,55 @@
             font-weight: 300;
         }
 
-        /* ------------------------------------------- */
-        /* MEDIA QUERY: OPTIMASI MOBILE (Max-width 600px) */
-        /* ------------------------------------------- */
         @media (max-width: 600px) {
             
-            /* JUDUL & SUBJUDUL (Teks Lebih Kecil) */
             h1 {
                 font-size: 2.3em; 
             }
             h2 {
-                font-size: 1.3em; /* Subjudul lebih ringkas */
+                font-size: 1.3em;
                 margin-bottom: 15px;
             }
             .greeting {
                  font-size: 1.2em;
             }
 
-            /* TEKS PARAGRAF & DATA POINT (Teks Lebih Kecil & Padat) */
             .header-paragraph {
-                font-size: 0.95em; /* Paragraf dikecilkan sedikit */
+                font-size: 0.95em;
                 padding: 0 10px; 
             }
             .data {
-                padding: 5px 10px; /* Data point lebih padat */
+                padding: 5px 10px;
                 margin: 3px;
-                font-size: 0.75em; /* Ukuran teks data point lebih kecil */
+                font-size: 0.75em;
             }
             
-            /* KEAHLIAN (Ikon Dikecilkan & Teks Dikecilkan) */
             .skill-list {
-                gap: 15px; /* Jarak antar skill dikurangi */
+                gap: 15px;
             }
             .skill-list li {
-                width: 45%; /* Tetap dua kolom */
-                height: 110px; 
-                font-size: 0.9em; /* Teks keahlian lebih kecil */
+                width: 45%;
+                height: 110px;
+                font-size: 0.9em;
                 padding: 10px;
             }
             
-            /* UKURAN GAMBAR IKON KEAHLIAN (Dikecilkan Sedikit) */
             .skill-icon {
-                width: 60px; /* Dikecilkan menjadi 60px */
-                height: 60px; /* Dikecilkan menjadi 60px */
-                margin-bottom: 5px; 
+                width: 60px;
+                height: 60px;
+                margin-bottom: 5px;
             }
 
-            /* SOSIAL MEDIA (Teks Lebih Kecil & Padat) */
             .social {
                 gap: 10px;
             }
             .social a {
                 padding: 8px 10px;
-                font-size: 0.85em; /* Teks link sosial media lebih kecil */
+                font-size: 0.85em;
             }
             .social-icon {
                 margin-right: 5px;
-                font-size: 1.1em; /* Ikon Font Awesome sedikit lebih kecil */
+                font-size: 1.1em;
             }
             
         }
@@ -288,7 +265,7 @@
     <div class="wrap">
         
         <header class="sec">
-            <p class="greeting">👋 Hai, perkenalkan aku:</p>
+            <p class="greeting">👋 Hai, perkenalkan saya</p>
             <h1>Aditya Pramana Putra</h1>
             
             <h2>Pelajar kelas 10 jurusan PPLG dari SMKN 9 Semarang</h2>
