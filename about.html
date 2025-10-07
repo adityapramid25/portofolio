@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Aditya Pramana Putra</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Gaya Umum */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #1C1C1C; /* Latar Belakang Utama */
+            color: #FAFAFA;    /* Teks Utama */
+            line-height: 1.6;
+            text-align: center; /* Teks default rata tengah, kecuali paragraf perkenalan */
+        }
+
+        /* Container & Header */
+        .wrap {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Gaya Khusus untuk Sapaan Awal */
+        .greeting {
+            font-size: 1.5em;
+            color: #00A9FF; /* Warna Aksen */
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 3.2em;
+            color: #00A9FF; /* Aksen */
+            padding-top: 5px;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        
+        /* Subjudul Perkenalan (h2) */
+        h2 {
+            font-size: 1.8em;
+            color: #FAFAFA;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        /* Gaya Bagian (Section) */
+        .sec {
+            padding: 40px 0;
+            margin-top: 20px;
+            border-top: 1px solid #444444; /* Garis Pemisah */
+        }
+        
+        .sec:first-of-type {
+            border-top: none;
+        }
+
+        .sec-title {
+            font-size: 2.2em;
+            color: #00A9FF; /* Aksen */
+            margin-bottom: 25px;
+            font-weight: 500;
+            text-align: center; /* Pastikan judul section tetap rata tengah */
+        }
+
+        /* Gaya Data Point */
+        .data {
+            display: inline-block;
+            background-color: #282828; 
+            padding: 8px 18px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9em;
+            font-weight: 500;
+            border: 1px solid #3A3A3A; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1); 
+            transition: all 0.2s ease;
+            cursor: default; 
+        }
+        
+        .data:hover {
+            background-color: #353535; 
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5), 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.15); 
+            transform: translateY(-2px); 
+        }
+        
+        /* Gaya Keahlian */
+        .skill-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* Gaya KOTAK BESAR untuk setiap Keahlian */
+        .skill-list li {
+            width: 180px;
+            height: 120px;
+            padding: 15px;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #282828;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            cursor: default;
+        }
+        
+        .skill-list li:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Gaya untuk Container Ikon Keahlian */
+        .skill-icon { 
+            margin-right: 0;
+            font-size: 2.5em; /* Ukuran font ikon lama, akan di-override oleh gambar */
+            margin-bottom: 8px;
+            line-height: 1;
+            /* Tambahan untuk gambar */
+            display: flex; /* Untuk memusatkan gambar jika perlu */
+            align-items: center;
+            justify-content: center;
+            width: 60px; /* Ukuran container gambar */
+            height: 60px; /* Ukuran container gambar */
+        }
+
+        /* Gaya untuk Gambar di dalam skill-icon */
+        .skill-icon img {
+            max-width: 100%; /* Memastikan gambar tidak melebihi lebar containernya */
+            max-height: 100%; /* Memastikan gambar tidak melebihi tinggi containernya */
+            height: auto; /* Mempertahankan rasio aspek gambar */
+            display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+            object-fit: contain; /* Memastikan seluruh gambar terlihat tanpa terpotong */
+        }
+
+
+        /* Warna Keahlian Spesifik */
+        .html { color: #E44D26; border-color: #E44D26; }
+        .html:hover { background-color: #E44D26; color: #FAFAFA; box-shadow: 0 6px 12px rgba(228, 77, 38, 0.5); }
+
+        .css { color: #1572B6; border-color: #1572B6; }
+        .css:hover { background-color: #1572B6; color: #FAFAFA; box-shadow: 0 6px 12px rgba(21, 114, 182, 0.5); }
+
+        .kotlin { color: #7F52FF; border-color: #7F52FF; }
+        .kotlin:hover { background-color: #7F52FF; color: #1C1C1C; box-shadow: 0 6px 12px rgba(127, 82, 255, 0.5); }
+        
+        /* Gaya Sosial Media */
+        .social {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social a {
+            font-size: 1.1em;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .social-icon { margin-right: 8px; font-size: 1.3em; }
+
+        /* Warna Sosial Media Spesifik */
+        .ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
+        .ig:hover { box-shadow: 0 0 15px rgba(220, 39, 67, 0.7); opacity: 0.9; }
+
+        .gh { background-color: #333333; color: white; border: 1px solid white; }
+        .gh:hover { background-color: white; color: black; box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+
+        .dc { background-color: #5865F2; color: white; }
+        .dc:hover { background-color: #7289DA; }
+
+        .tt { background-color: #000000; color: white; border: 1px solid #FF0050; }
+        .tt:hover { background-color: #222; }
+
+        .fb { background-color: #1877F2; color: white; }
+        .fb:hover { background-color: #3b5998; }
+        
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            padding: 20px 0;
+            border-top: 1px solid #444444;
+            font-size: 0.8em;
+            color: #444444;
+        }
+        
+        /* Style untuk email di bagian kontak */
+        #contact p a {
+             color: #00A9FF;
+             text-decoration: none;
+        }
+
+        /* STYLE PERUBAHAN: Teks Rata Kanan Kiri */
+        .header-paragraph {
+            text-align: justify; 
+            max-width: 650px; 
+            margin: 0 auto 20px; 
+            font-size: 1.1em; 
+            font-weight: 300;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        
+        <header class="sec">
+            <p class="greeting">👋 Hai, perkenalkan aku:</p>
+            <h1>Aditya Pramana Putra</h1>
+            
+            <h2>Pelajar kelas 10 jurusan PPLG dari SMKN 9 Semarang</h2>
+            
+            <p class="header-paragraph">
+                Halo! Saya Aditya Pramana Putra, seorang pelajar berusia 15 tahun yang sekarang berada di kelas 10 jurusan PPLG di SMKN 9 Semarang.
+                Cita-cita dan tujuan saya adalah membangun karier sebagai seorang Software Engineer dengan fokus utama saya berada pada Mobile App Development. 
+                Meskipun fokus utama saya ada di Mobile App Development, akan tetapi saya juga tertarik dengan pengembangan website.
+                Saat ini, saya aktif mengasah dasar-dasar coding menggunakan HTML, CSS, dan Kotlin sebagai langkah awal menuju cita-cita tersebut.
+            </p> <div class="info">
+                <span class="data">Umur: 15 Tahun</span>
+                <span class="data">Kelas: 10 PPLG</span>
+                <span class="data">Cita-cita: Software Engineer 💡</span>
+                <span class="data">Minat: Mobile App Development 📱</span>
+            </div>
+        </header>
+
+        <section id="skills" class="sec">
+            <h3 class="sec-title">Keahlian Utama</h3>
+            <ul class="skill-list">
+                <li class="html">
+                    <span class="skill-icon"><img src="image/html-5.png" alt="html logo"></span> 
+                    HTML
+                </li>
+                <li class="css">
+                    <span class="skill-icon"><img src="image/css-3.png" alt="css logo"></span> 
+                    CSS
+                </li>
+                <li class="kotlin">
+                    <span class="skill-icon"><img src="image/Kotlin_Icon.png" alt="kotlin logo"></span> 
+                    Kotlin
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact" class="sec">
+            <h3 class="sec-title">Hubungi Saya</h3>
+            
+        <ul class="social">
+            <li><a href="https://www.instagram.com/adtzya_p" target="_blank" class="ig"><span class="social-icon"><i class="fab fa-instagram"></i></span> Instagram</a></li>
+    
+            <li><a href="#" target="_blank" class="gh"><span class="social-icon"><i class="fab fa-github"></i></span> GitHub</a></li>
+    
+            <li><a href="https://discordapp.com/users/967176368372715530" target="_blank" class="dc"><span class="social-icon"><i class="fab fa-discord"></i></span> Discord</a></li>
+    
+            <li><a href="https://www.tiktok.com/@naruhikaru" target="_blank" class="tt"><span class="social-icon"><i class="fab fa-tiktok"></i></span> TikTok</a></li>
+    
+            <li><a href="#" target="_blank" class="fb"><span class="social-icon"><i class="fab fa-facebook-f"></i></span> Facebook</a></li>
+        </ul>
+            
+            <p style="margin-top: 30px; font-size: 1em; text-align: center;">
+                Untuk urusan profesional, silakan kirimkan email ke: <a href="mailto:aditya.pramana.pplg@example.com">aditya.pramana.pplg@example.com</a>
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Aditya Pramana Putra. SMKN 9 SEMARANG | PPLG.</p>
+    </footer>
+
+</body>
+</html>
