@@ -15,10 +15,10 @@
 
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #1C1C1C;
-            color: #FAFAFA;
+            background-color: #1C1C1C; /* Latar Belakang Utama */
+            color: #FAFAFA;    /* Teks Utama */
             line-height: 1.6;
-            text-align: center;
+            text-align: center; /* Teks default rata tengah, kecuali paragraf perkenalan */
         }
 
         /* Container & Header */
@@ -28,21 +28,23 @@
             padding: 20px;
         }
 
+        /* Gaya Khusus untuk Sapaan Awal */
         .greeting {
             font-size: 1.5em;
-            color: #00A9FF;
+            color: #00A9FF; /* Warna Aksen */
             margin-bottom: 5px;
             font-weight: 500;
         }
 
         h1 {
             font-size: 3.2em;
-            color: #00A9FF;
+            color: #00A9FF; /* Aksen */
             padding-top: 5px;
             margin-bottom: 5px;
             letter-spacing: 1px;
         }
         
+        /* Subjudul Perkenalan (h2) */
         h2 {
             font-size: 1.8em;
             color: #FAFAFA;
@@ -54,7 +56,7 @@
         .sec {
             padding: 40px 0;
             margin-top: 20px;
-            border-top: 1px solid #444444;
+            border-top: 1px solid #444444; /* Garis Pemisah */
         }
         
         .sec:first-of-type {
@@ -63,10 +65,10 @@
 
         .sec-title {
             font-size: 2.2em;
-            color: #00A9FF;
+            color: #00A9FF; /* Aksen */
             margin-bottom: 25px;
             font-weight: 500;
-            text-align: center;
+            text-align: center; /* Pastikan judul section tetap rata tengah */
         }
 
         /* Gaya Data Point */
@@ -117,35 +119,36 @@
             background-color: #282828;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
             cursor: default;
-            font-size: 1.1em; /* Ukuran teks keahlian */
+            font-size: 1.1em; /* Ukuran teks keahlian desktop */
         }
         
         .skill-list li:hover {
             transform: translateY(-5px);
         }
 
-        /* Gaya untuk Container Ikon Keahlian */
+        /* Gaya untuk Container Ikon Keahlian (Desktop Default) */
         .skill-icon { 
             margin-right: 0;
             margin-bottom: 8px;
             line-height: 1;
-            display: flex;
+            display: flex; 
             align-items: center;
             justify-content: center;
-            width: 70px;
-            height: 70px;
+            width: 70px; /* Ukuran gambar default desktop */
+            height: 70px; /* Ukuran gambar default desktop */
         }
 
         /* Gaya untuk Gambar di dalam skill-icon */
         .skill-icon img {
-            max-width: 100%;
-            max-height: 100%;
-            height: auto;
-            display: block;
-            object-fit: contain;
+            max-width: 100%; 
+            max-height: 100%; 
+            height: auto; 
+            display: block; 
+            object-fit: contain; 
         }
 
-        /* Warna Keahlian Spesifik (sama seperti sebelumnya) */
+
+        /* Warna Keahlian Spesifik */
         .html { color: #E44D26; border-color: #E44D26; }
         .html:hover { background-color: #E44D26; color: #FAFAFA; box-shadow: 0 6px 12px rgba(228, 77, 38, 0.5); }
 
@@ -177,7 +180,7 @@
 
         .social-icon { margin-right: 8px; font-size: 1.3em; }
 
-        /* Warna Sosial Media Spesifik (sama seperti sebelumnya) */
+        /* Warna Sosial Media Spesifik */
         .ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
         .ig:hover { box-shadow: 0 0 15px rgba(220, 39, 67, 0.7); opacity: 0.9; }
 
@@ -216,61 +219,64 @@
             font-size: 1.1em; 
             font-weight: 300;
         }
-        
+
         /* ------------------------------------------- */
         /* MEDIA QUERY: OPTIMASI MOBILE (Max-width 600px) */
         /* ------------------------------------------- */
         @media (max-width: 600px) {
             
-            /* JUDUL & SUBJUDUL */
+            /* JUDUL & SUBJUDUL (Teks Lebih Kecil) */
             h1 {
-                font-size: 2.5em; /* Mengecilkan H1 */
+                font-size: 2.3em; 
             }
             h2 {
-                font-size: 1.4em; /* Mengecilkan H2 agar lebih ringkas */
-                margin-bottom: 20px;
+                font-size: 1.3em; /* Subjudul lebih ringkas */
+                margin-bottom: 15px;
             }
             .greeting {
-                 font-size: 1.3em;
+                 font-size: 1.2em;
             }
 
-            /* TEKS PARAGRAF & DATA POINT */
+            /* TEKS PARAGRAF & DATA POINT (Teks Lebih Kecil & Padat) */
             .header-paragraph {
-                font-size: 1em; /* Mengatur font paragraf menjadi standar 1em */
-                padding: 0 5px; /* Memberikan sedikit padding di samping */
+                font-size: 0.95em; /* Paragraf dikecilkan sedikit */
+                padding: 0 10px; 
             }
             .data {
-                padding: 6px 12px; /* Data point lebih ringkas */
+                padding: 5px 10px; /* Data point lebih padat */
                 margin: 3px;
-                font-size: 0.8em; /* Ukuran teks data point lebih kecil */
+                font-size: 0.75em; /* Ukuran teks data point lebih kecil */
             }
             
-            /* KEAHLIAN */
+            /* KEAHLIAN (Ikon Dikecilkan & Teks Dikecilkan) */
+            .skill-list {
+                gap: 15px; /* Jarak antar skill dikurangi */
+            }
             .skill-list li {
-                width: 45%; 
-                height: 120px; /* Kembali ke 120px agar tidak terlalu panjang */
-                font-size: 1em; /* Ukuran teks keahlian lebih kecil */
+                width: 45%; /* Tetap dua kolom */
+                height: 110px; 
+                font-size: 0.9em; /* Teks keahlian lebih kecil */
+                padding: 10px;
             }
             
-            /* Memastikan 1 item tersisa tetap mengisi lebar */
-            .skill-list li:last-child:nth-child(odd) {
-                width: 90%; 
-            }
-
-            /* IKON KEAHLIAN (ukuran gambar tetap sama seperti yang terakhir Anda minta) */
+            /* UKURAN GAMBAR IKON KEAHLIAN (Dikecilkan Sedikit) */
             .skill-icon {
-                width: 70px; 
-                height: 70px; 
-                margin-bottom: 5px; /* Jarak antara ikon dan teks dikurangi */
+                width: 60px; /* Dikecilkan menjadi 60px */
+                height: 60px; /* Dikecilkan menjadi 60px */
+                margin-bottom: 5px; 
             }
 
-            /* SOSIAL MEDIA */
+            /* SOSIAL MEDIA (Teks Lebih Kecil & Padat) */
+            .social {
+                gap: 10px;
+            }
             .social a {
-                padding: 8px 12px;
-                font-size: 0.9em; /* Teks link sosial media lebih kecil */
+                padding: 8px 10px;
+                font-size: 0.85em; /* Teks link sosial media lebih kecil */
             }
             .social-icon {
-                margin-right: 5px; /* Jarak ikon dari teks dikurangi */
+                margin-right: 5px;
+                font-size: 1.1em; /* Ikon Font Awesome sedikit lebih kecil */
             }
             
         }
@@ -324,14 +330,14 @@
             
             <ul class="social">
                 <li><a href="https://www.instagram.com/adtzya_p" target="_blank" class="ig"><span class="social-icon"><i class="fab fa-instagram"></i></span> Instagram</a></li>
-                <li><a href="#" target="_blank" class="gh"><span class="social-icon"><i class="fab fa-github"></i></span> GitHub</a></li>
+                <li><a href="https://github.com/adityapramid25" target="_blank" class="gh"><span class="social-icon"><i class="fab fa-github"></i></span> GitHub</a></li>
                 <li><a href="https://discordapp.com/users/967176368372715530" target="_blank" class="dc"><span class="social-icon"><i class="fab fa-discord"></i></span> Discord</a></li>
                 <li><a href="https://www.tiktok.com/@naruhikaru" target="_blank" class="tt"><span class="social-icon"><i class="fab fa-tiktok"></i></span> TikTok</a></li>
                 <li><a href="#" target="_blank" class="fb"><span class="social-icon"><i class="fab fa-facebook-f"></i></span> Facebook</a></li>
             </ul>
             
             <p style="margin-top: 30px; font-size: 1em; text-align: center;">
-                Untuk urusan profesional, silakan kirimkan email ke: <a href="mailto:aditya.pramana.pplg@example.com">aditya.pramana.pplg@example.com</a>
+                Jika ingin menghubungi saya, silahkan melalui sosial media saya yang sudah tertera diatas.
             </p>
         </section>
 
