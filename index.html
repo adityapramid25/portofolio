@@ -103,7 +103,7 @@
 
         /* Gaya KOTAK BESAR untuk setiap Keahlian (Desktop Default) */
         .skill-list li {
-            width: 180px; /* Ukuran ini bagus untuk desktop */
+            width: 180px;
             height: 120px;
             padding: 15px;
             border: 2px solid transparent;
@@ -117,6 +117,7 @@
             background-color: #282828;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
             cursor: default;
+            font-size: 1.1em; /* Ukuran teks keahlian */
         }
         
         .skill-list li:hover {
@@ -131,8 +132,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 70px; /* Ukuran icon diperbesar */
-            height: 70px; /* Ukuran icon diperbesar */
+            width: 70px;
+            height: 70px;
         }
 
         /* Gaya untuk Gambar di dalam skill-icon */
@@ -220,34 +221,56 @@
         /* MEDIA QUERY: OPTIMASI MOBILE (Max-width 600px) */
         /* ------------------------------------------- */
         @media (max-width: 600px) {
-            /* Mengecilkan judul utama sedikit */
+            
+            /* JUDUL & SUBJUDUL */
             h1 {
-                font-size: 2.5em;
+                font-size: 2.5em; /* Mengecilkan H1 */
+            }
+            h2 {
+                font-size: 1.4em; /* Mengecilkan H2 agar lebih ringkas */
+                margin-bottom: 20px;
+            }
+            .greeting {
+                 font-size: 1.3em;
             }
 
-            /* Membuat kotak keahlian menjadi 2 kolom dan lebih lebar */
-            .skill-list li {
-                width: 45%; /* Membuat dua item muat per baris (2*45% = 90%. Sisa 10% untuk gap) */
-                height: 140px; /* Sedikit lebih tinggi agar ikon dan teks punya ruang */
-                padding: 10px;
-                gap: 5px; /* Kurangi gap di mobile */
+            /* TEKS PARAGRAF & DATA POINT */
+            .header-paragraph {
+                font-size: 1em; /* Mengatur font paragraf menjadi standar 1em */
+                padding: 0 5px; /* Memberikan sedikit padding di samping */
+            }
+            .data {
+                padding: 6px 12px; /* Data point lebih ringkas */
+                margin: 3px;
+                font-size: 0.8em; /* Ukuran teks data point lebih kecil */
             }
             
-            /* Jika hanya ada 1 item yang tersisa, buat dia full width */
+            /* KEAHLIAN */
+            .skill-list li {
+                width: 45%; 
+                height: 120px; /* Kembali ke 120px agar tidak terlalu panjang */
+                font-size: 1em; /* Ukuran teks keahlian lebih kecil */
+            }
+            
+            /* Memastikan 1 item tersisa tetap mengisi lebar */
             .skill-list li:last-child:nth-child(odd) {
                 width: 90%; 
             }
 
-            /* Memperbesar ikon di mobile agar lebih jelas */
+            /* IKON KEAHLIAN (ukuran gambar tetap sama seperti yang terakhir Anda minta) */
             .skill-icon {
-                width: 75px; 
-                height: 75px; 
+                width: 70px; 
+                height: 70px; 
+                margin-bottom: 5px; /* Jarak antara ikon dan teks dikurangi */
             }
 
-            /* Memastikan link sosial media tidak terlalu lebar jika di mobile */
+            /* SOSIAL MEDIA */
             .social a {
-                padding: 8px 15px;
-                font-size: 1em;
+                padding: 8px 12px;
+                font-size: 0.9em; /* Teks link sosial media lebih kecil */
+            }
+            .social-icon {
+                margin-right: 5px; /* Jarak ikon dari teks dikurangi */
             }
             
         }
